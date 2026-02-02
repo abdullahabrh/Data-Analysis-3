@@ -1,0 +1,10 @@
+# CatBoost (all variants)
+catboost_info*/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db
