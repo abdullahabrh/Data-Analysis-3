@@ -17,7 +17,6 @@ Data is sourced from **Inside Airbnb** and stored directly in this repository to
 ### Cities and periods used:
 - **Vienna – March 2024** (training and test data)
 - **Vienna – September 2024** (temporal validity test)
-- **Munich – 2024** (geographic validity test)
 - **Berlin – 2024** (additional geographic robustness check, optional)
 
 All raw and cleaned datasets are stored in the `data/` folder.
@@ -32,19 +31,15 @@ Assignment_1_Airbnb_Pricing/
 │ ├── vienna_cleaned_march.csv
 │ ├── vienna_raw_september.csv
 │ ├── vienna_cleaned_september.csv
-│ ├── munich_raw.csv
-│ ├── munich_cleaned.csv
 │ ├── berlin_raw.csv
 │ └── berlin_cleaned.csv
 │
 ├── notebooks/
 │ ├── data_cleaning_vienna_march.ipynb
 │ ├── data_cleaning_vienna_september.ipynb
-│ ├── data_cleaning_munich.ipynb
 │ ├── data_cleaning_berlin.ipynb
 │ ├── models.ipynb
 │ ├── validity_september.ipynb
-│ ├── validity_munich.ipynb
 │ └── validity_berlin.ipynb
 │
 ├── results/
@@ -72,7 +67,6 @@ The following steps are applied consistently across all datasets:
 Implemented in:
 - `data_cleaning_vienna_march.ipynb`
 - `data_cleaning_vienna_september.ipynb`
-- `data_cleaning_munich.ipynb`
 - `data_cleaning_berlin.ipynb`
 
 ---
@@ -140,10 +134,7 @@ Implemented in:
 Models trained on **Vienna** are evaluated on **Munich**, a different city in the same region, to test spatial generalization.
 
 Implemented in:
-- `validity_munich.ipynb`
-
-An additional robustness check using **Berlin** is provided in:
-- `validity_berlin.ipynb` (optional, not required for grading)
+- `validity_berlin.ipynb`
 
 ---
 
@@ -152,7 +143,27 @@ An additional robustness check using **Berlin** is provided in:
 This project is fully reproducible.
 
 ### To reproduce the analysis on a new machine:
+#### Core Data Libraries
+numpy>=1.24.0
+pandas>=2.0.0
 
+#### Statistical Analysis
+statsmodels>=0.14.0
+
+#### Machine Learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+catboost>=1.2.0
+lightgbm>=4.0.0
+
+#### Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+#### Jupyter Notebook
+ipython>=8.12.0
+jupyter>=1.0.0
+notebook>=6.5.0
 ```bash
 git clone <repository_url>
 cd Data-Analysis-3/Assignment_1_Airbnb_Pricing
