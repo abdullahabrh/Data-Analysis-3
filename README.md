@@ -166,5 +166,5 @@ jupyter>=1.0.0
 notebook>=6.5.0
 ```bash
 git clone <repository_url>
-cd Data-Analysis-3/Assignment_1_Airbnb_Pricing
+cd airbnb-price-prediction/Assignment_1_Airbnb_Pricing
 pip install -r requirements.txt
